@@ -3,8 +3,8 @@ List<String> Ssecond = [];
 
 SundayShiftChangeLogic(int p) {
   // int p = 1;
-  List<String> a1 = ['a', 'b', 'c'];
-  List<String> a2 = ['d', 'e', 'f'];
+  List<String> a1 = ['JINEESH', 'ANEESH KUMAR', 'BABY FRANCIS'];
+  List<String> a2 = ['BABY FRANCIS', 'JINEESH', 'ANEESH KUMAR'];
 
   for (var i = 0; i < p; i++) {
     String x1 = a1[0];
@@ -18,8 +18,8 @@ SundayShiftChangeLogic(int p) {
     a2[a2.length - 1] = x2;
   }
 
-  List<String> b1 = ['a', 'b', 'c', 'd'];
-  List<String> b2 = ['d', 'e', 'f', 'g'];
+  List<String> b1 = ['SANDEEP', 'JINEESH', 'PRINCE', 'MOHANAN'];
+  List<String> b2 = ['PRINCE', 'MOHANAN', 'SANDEEP', 'JINEESH'];
   for (var i = 0; i < p; i++) {
     String x1 = b1[0];
     String x2 = b2[0];
@@ -33,12 +33,15 @@ SundayShiftChangeLogic(int p) {
   }
   SdutyElect.clear();
   Ssecond.clear();
-  for (var i = 0; i < a1.length; i++) {
-    SdutyElect.add(a1[i] + a2[i]);
-  }
-  for (var i = 0; i < b1.length; i++) {
-    Ssecond.add(b1[i] + b2[i]);
-  }
+  SdutyElect.add(a1[0] + ' AND ' + b1[0]);
+  Ssecond.add(a2[0] + ' AND ' + b2[0]);
+  // for (var i = 0; i < a1.length; i++) {
+  //   SdutyElect.add(a1[i] + a2[i]);
+
+  // }
+  // for (var i = 0; i < b1.length; i++) {
+  //   Ssecond.add(b1[i] + b2[i]);
+  // }
   // print(a1);
   // print(a2);
   // print(b1);

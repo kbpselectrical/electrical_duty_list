@@ -54,13 +54,13 @@ class _MyHomePageState extends State<MyHomePage> {
             SizedBox(
               height: 190,
               child: CupertinoDatePicker(
-                  initialDateTime: dateTime,
-                  minimumDate: dateTime,
+                  initialDateTime: DateTime(2022, 1, 1),
+                  // minimumDate: dateTime,
                   maximumDate: DateTime(2030),
                   mode: CupertinoDatePickerMode.date,
-                  onDateTimeChanged: (datTime) {
+                  onDateTimeChanged: (dateTime) {
                     setState(() {
-                      this.dateTime = datTime;
+                      this.dateTime = dateTime;
                     });
                     a1 = dateTime.year;
                     a2 = dateTime.month;
@@ -72,7 +72,7 @@ class _MyHomePageState extends State<MyHomePage> {
             ElevatedButton(
                 onPressed: (() async {
                   SundayCalc();
-                  SundayShiftChangeLogic(nofSundays);
+                  // SundayShiftChangeLogic(nofSundays);
 
                   // final pdfFile = await PdfDutyListApi.generateDutyList();
                   // PdfApi.openFile(pdfFile);
