@@ -1,5 +1,8 @@
-import 'package:duty_list_v1/logic/shift_change_logic.dart';
+import 'package:duty_list_v1/logic/sunday_shift_change.dart';
+import 'package:duty_list_v1/logic/week_shift_change_logic.dart';
 import 'package:duty_list_v1/logic/sunday_calc..dart';
+import 'package:duty_list_v1/pdf/display_pdf.dart';
+import 'package:duty_list_v1/pdf/file_open_pdf.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -49,7 +52,7 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             SizedBox(
-              height: 100,
+              height: 190,
               child: CupertinoDatePicker(
                   initialDateTime: dateTime,
                   minimumDate: dateTime,
@@ -67,10 +70,12 @@ class _MyHomePageState extends State<MyHomePage> {
               height: 100,
             ),
             ElevatedButton(
-                onPressed: (() {
+                onPressed: (() async {
                   SundayCalc();
-                  ShiftChangeLogic();
-                  // print(nofSundays);
+                  SundayShiftChangeLogic(nofSundays);
+
+                  // final pdfFile = await PdfDutyListApi.generateDutyList();
+                  // PdfApi.openFile(pdfFile);
                 }),
                 child: Text('Download')),
           ],
