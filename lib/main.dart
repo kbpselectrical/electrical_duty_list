@@ -1,5 +1,3 @@
-import 'package:duty_list_v1/logic/sunday_shift_change.dart';
-import 'package:duty_list_v1/logic/week_shift_change_logic.dart';
 import 'package:duty_list_v1/logic/sunday_calc..dart';
 import 'package:duty_list_v1/pdf/display_pdf.dart';
 import 'package:duty_list_v1/pdf/file_open_pdf.dart';
@@ -72,10 +70,9 @@ class _MyHomePageState extends State<MyHomePage> {
             ElevatedButton(
                 onPressed: (() async {
                   SundayCalc();
-                  // SundayShiftChangeLogic(nofSundays);
 
-                  // final pdfFile = await PdfDutyListApi.generateDutyList();
-                  // PdfApi.openFile(pdfFile);
+                  final pdfFile = await PdfDutyListApi.generateDutyList();
+                  PdfApi.openFile(pdfFile);
                 }),
                 child: Text('Download')),
           ],

@@ -14,10 +14,7 @@ class PdfDutyListApi {
   static Future<File> generateDutyList() async {
     final pdf = Document();
 
-    final customFont =
-        // Font.ttf(await rootBundle.load('assets/OpenSans-Regular.ttf'));
-
-        pdf.addPage(
+    final customFont = pdf.addPage(
       MultiPage(
         build: (Context) => <Widget>[
           builCustomHeader(),
@@ -56,26 +53,26 @@ class PdfDutyListApi {
       );
 
   static Widget DutyListHeader(i) => Container(
-        padding: EdgeInsets.only(bottom: 3 * PdfPageFormat.mm),
+        padding: EdgeInsets.only(bottom: 1 * PdfPageFormat.mm),
         child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-          SizedBox(width: 10 * PdfPageFormat.cm),
+          SizedBox(width: .1 * PdfPageFormat.cm),
           Text(week[i],
               style: TextStyle(
                 fontSize: 10,
                 color: PdfColors.black,
                 decoration: TextDecoration.underline,
               )),
-
+          SizedBox(height: .2 * PdfPageFormat.cm),
           Bullet(
-              text: 'DUTY ELECTRICIAN      :' + '   ' + weekEndS1[i],
+              text: 'DUTY ELECTRICIAN      :' + '   ' + weekS1[i],
               bulletColor: PdfColors.white),
 
           //  SizedBox(height: .1 * PdfPageFormat.cm),
           Bullet(
-              text: 'GENERAL           :' + '   ' + weekEndS2[i],
+              text: 'GENERAL                        :' + '   ' + weekS2[i],
               bulletColor: PdfColors.white),
           Bullet(
-              text: 'SECOND    :' + '   ' + weekEndS3[i],
+              text: 'SECOND                         :' + '   ' + weekS3[i],
               bulletColor: PdfColors.white),
 // **************************************************************
           Text(weekEnd[i],
@@ -84,15 +81,15 @@ class PdfDutyListApi {
                 color: PdfColors.black,
                 decoration: TextDecoration.underline,
               )),
-
+          SizedBox(height: .1 * PdfPageFormat.cm),
           Bullet(
-              text: 'DUTY ELECTRICIAN       :' + '   ' + weekS1[i],
+              text: 'DUTY ELECTRICIAN       :' + '   ' + weekEndS1[i],
               bulletColor: PdfColors.white),
 
           //  SizedBox(height: .1 * PdfPageFormat.cm),
 
           Bullet(
-              text: 'SECOND   :' + '   ' + weekS2[i],
+              text: 'SECOND                          :' + '   ' + weekEndS2[i],
               bulletColor: PdfColors.white),
         ]),
       );

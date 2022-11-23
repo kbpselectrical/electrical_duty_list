@@ -2,21 +2,20 @@ List<String> WdutyElect = [];
 List<String> Wgeneral = [];
 List<String> Wsecond = [];
 WeekShiftChangeLogic(int p) {
-  // int p = 1;
   List<String> a1 = [
-    'BABY FRANCIS, ANEESHKUMAR AND JINEESH',
     'BABY FRANCIS, JINEESH AND PRINCE',
-    'ANEESHKUMAR, JINEESH AND SANDEEP '
+    'ANEESHKUMAR, JINEESH AND SANDEEP',
+    'BABY FRANCIS, ANEESHKUMAR AND JINEESH '
   ];
   List<String> a2 = [
-    'MOHANAN, PRINCE AND EMMANUEL',
     'MOHANAN, SANDEEP AND EMMANUEL',
-    'MOHANAN, JINEESH AND EMMANUEL'
+    'MOHANAN, JINEESH AND EMMANUEL',
+    'MOHANAN, PRINCE AND EMMANUEL'
   ];
   List<String> a3 = [
-    'JINESH AND SANDEEP',
     'ANEESHKUMAR AND JINEESH',
-    'BABY FRANCIS AND PRINCE'
+    'BABY FRANCIS AND PRINCE',
+    'JINESH AND SANDEEP'
   ];
   for (var i = 0; i < p; i++) {
     String x1 = a1[0];
@@ -37,7 +36,4 @@ WeekShiftChangeLogic(int p) {
   WdutyElect.add(a1[0]);
   Wgeneral.add(a2[0]);
   Wsecond.add(a3[0]);
-  // print(a1);
-  // print(a2);
-  // print(a3);
 }
