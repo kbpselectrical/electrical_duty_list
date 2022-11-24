@@ -40,7 +40,7 @@ class PdfDutyListApi {
         padding: EdgeInsets.only(bottom: 3 * PdfPageFormat.mm),
         decoration: BoxDecoration(
             border:
-                Border(bottom: BorderSide(width: 2, color: PdfColors.blue))),
+                Border(bottom: BorderSide(width: 2, color: PdfColors.black))),
         child: Row(children: [
           // PdfLogo(),
           // SizedBox(width: .5 * PdfPageFormat.cm),
@@ -48,7 +48,7 @@ class PdfDutyListApi {
           Text(
               'DUTY LIST OF ELECTRICAL SECTION FOR THE MONTH OF ${DateFormat.LLL().format(DateTime(a1, a2, a3))}' +
                   '  ${a1}',
-              style: TextStyle(fontSize: 14, color: PdfColors.red))
+              style: TextStyle(fontSize: 14, color: PdfColors.black))
         ]),
       );
 

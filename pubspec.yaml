@@ -36,6 +36,7 @@ dependencies:
   open_file: ^3.2.1
   path_provider: ^2.0.11
   pdf: ^3.8.4
+  printing: ^5.9.3
 
 dev_dependencies:
   flutter_lints: ^2.0.0

@@ -31,6 +31,13 @@ SundayCalc() {
     sun.add(i);
   }
   int k = nofSundays;
+  week.clear();
+  weekS1.clear();
+  weekS2.clear();
+  weekS3.clear();
+  weekEnd.clear();
+  weekEndS1.clear();
+  weekEndS2.clear();
   for (var j = 0; j < sun.length; j = j + 1) {
 // ***********************************************
     week.add(DateFormat.yMd('es').format(DateTime(a1, a2, sun[j] - 6)) +
@@ -43,7 +50,7 @@ SundayCalc() {
 
 // ****************************************************
     weekEnd.add(DateFormat.yMd('es').format(DateTime(a1, a2, sun[j])) +
-        ' Sunday'); // print short date in Spanish format
+        ' SUNDAY'); // print short date in Spanish format
     SundayShiftChangeLogic(k);
     weekEndS1.add(SdutyElect[0]);
     weekEndS2.add(Ssecond[0]);

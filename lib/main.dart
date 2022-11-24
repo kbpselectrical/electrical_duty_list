@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.blueGrey,
       ),
       home: const MyHomePage(title: 'Flutter Demo Home Page'),
     );
@@ -43,7 +43,17 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Select The Date'),
+        title: FittedBox(
+          child: Text(
+            'DUTY LIST OF ELECTRICAL SECTION:Select The Date',
+          ),
+        ),
+        centerTitle: true,
+        backgroundColor: Colors.orangeAccent,
+        shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.only(
+                bottomLeft: Radius.circular(10),
+                bottomRight: Radius.circular(10))),
       ),
       body: Center(
         child: Column(
@@ -53,8 +63,8 @@ class _MyHomePageState extends State<MyHomePage> {
               height: 190,
               child: CupertinoDatePicker(
                   initialDateTime: DateTime(2022, 1, 1),
-                  // minimumDate: dateTime,
-                  maximumDate: DateTime(2030),
+                  minimumDate: DateTime(2022),
+                  maximumDate: DateTime(2060),
                   mode: CupertinoDatePickerMode.date,
                   onDateTimeChanged: (dateTime) {
                     setState(() {
@@ -75,6 +85,12 @@ class _MyHomePageState extends State<MyHomePage> {
                   PdfApi.openFile(pdfFile);
                 }),
                 child: Text('Download')),
+
+            //     ElevatedButton(
+            //         onPressed: (() async {
+            //           printDoc();
+            //         }),
+            //         child: Text('Print')),
           ],
         ),
       ),

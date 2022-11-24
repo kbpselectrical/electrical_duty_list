@@ -3,8 +3,8 @@ List<String> Ssecond = [];
 
 SundayShiftChangeLogic(int p) {
   // int p = 1;
-  List<String> a1 = ['ANEESH KUMAR', 'BABY FRANCIS', 'JINEESH'];
-  List<String> a2 = ['JINEESH', 'ANEESH KUMAR', 'BABY FRANCIS'];
+  List<String> a1 = ['ANEESH KUMAR', 'BABY FRANCIS', 'JINESH'];
+  List<String> a2 = ['JINESH', 'ANEESH KUMAR', 'BABY FRANCIS'];
 
   for (var i = 0; i < p; i++) {
     String x1 = a1[0];

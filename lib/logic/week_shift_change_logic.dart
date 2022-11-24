@@ -3,8 +3,8 @@ List<String> Wgeneral = [];
 List<String> Wsecond = [];
 WeekShiftChangeLogic(int p) {
   List<String> a1 = [
-    'BABY FRANCIS, JINEESH AND PRINCE',
-    'ANEESHKUMAR, JINEESH AND SANDEEP',
+    'BABY FRANCIS, JINESH AND PRINCE',
+    'ANEESHKUMAR, JINESH AND SANDEEP',
     'BABY FRANCIS, ANEESHKUMAR AND JINEESH '
   ];
   List<String> a2 = [
